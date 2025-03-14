@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIY Electronics World</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #333;
+            padding: 15px 20px;
+            color: white;
+        }
+        .navbar .logo {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            padding: 0;
+            margin: 0;
+        }
+        .navbar ul li {
+            margin: 0 15px;
+        }
+        .navbar ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        .hero {
+            color: rgb(87, 87, 87);
+            padding: 50px 20px;
+        }
+        .search-bar {
+            padding: 10px;
+            width: 40%;
+            margin: 10px 0;
+            border-radius: 10px;
+        }
+        .buttons button, .tags button {
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+        .btn.learn { background: gray; color: white; }
+        .btn.start { background: black; color: white; }
+        .projects {
+            padding: 20px;
+            background: white;
+        }
+        .project-list {
+            display: flex;
+            justify-content: center;
+            gap: 180px;
+        }
+        .project {
+            background: #fff;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 10px 10px 10px 10px rgba(0,0,0,0.1);
+        }
+        .project img {
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div><img src="./assets/logo.webp" alt="logo" style="height: 70px; width: 70px; margin: 0;"></div>
+        <!-- <div class="logo">DIY Electronics</div> -->
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="/Redirection screens/Projects.html">DIYs</a></li>
+            <li><a href="/Redirection screens/about.html">About</a></li>
+            <li><a href="/Redirection screens/contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <header class="hero">
+        <h1>Welcome to our <br/> DIY Electronics World</h1>
+        <p>Explore and create amazing projects</p>
+        <input type="text" placeholder="Search for projects" class="search-bar">
+        <div class="buttons">
+            <button class="btn learn">Learn More</button>
+            <button class="btn start">Get Started</button>
+        </div>
+        <div class="tags">
+            <button>Featured</button>
+            <button>Trending</button>
+            <button>Popular</button>
+        </div>
+    </header>
+    
+    <section class="projects">
+        <h2>Popular Projects</h2>
+        <div class="project-list">
+            <div class="project">
+                <img src="./assets/led-cube.jpg" alt="LED Cube">
+                <h3>LED Cube</h3>
+                <p>Create your own light show</p>
+                <span>Level: Intermediate</span>
+            </div>
+            <div class="project">
+                <img src="./assets/smart-home.png" alt="Smart Home Automation">
+                <h3>Smart Home Automation</h3>
+                <p>Make your home smarter</p>
+                <span>Level: Advanced</span>
+            </div>
+            <div class="project">
+                <img src="./assets/arduino-robot.png" alt="Arduino Robotics">
+                <h3>Arduino Robotics</h3>
+                <p>Build your own robot</p>
+                <span>Level: Beginner</span>
+            </div>
+        </div>
+    </section>
+    
+    <script>
+        document.querySelector('.search-bar').addEventListener('input', function(event) {
+            console.log('Searching for:', event.target.value);
+        });
+        
+        document.querySelectorAll('.buttons button').forEach(button => {
+            button.addEventListener('click', function() {
+                alert('Button Clicked: ' + this.textContent);
+            });
+        });
+    </script>
+</body>
+</html>

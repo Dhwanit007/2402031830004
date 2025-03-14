@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us - DIY Electronics</title>
+  </head>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #333;
+        padding: 15px 20px;
+        color: white;
+      }
+      .navbar .logo {
+        font-size: 20px;
+        font-weight: bold;
+      }
+      .navbar ul {
+        list-style: none;
+        display: flex;
+        padding: 0;
+        margin: 0;
+      }
+      .navbar ul li {
+        margin: 0 15px;
+      }
+      .navbar ul li a {
+        color: white;
+        text-decoration: none;
+      }
+
+    .about-section {
+      position: relative;
+      background: url("../assets/project2.jpg") no-repeat center center/cover;
+      height: 80vh;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .overlay {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    .about-content {
+      position: relative;
+      z-index: 2;
+      max-width: 80%;
+    }
+
+    .join-btn {
+      padding: 10px 15px;
+      background: #ff9800;
+      border: none;
+      color: white;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    footer {
+      text-align: right;
+      padding: 10px;
+    }
+  </style>
+  <body>
+    <nav class="navbar">
+        <div>
+          <a href="../index.html"
+            ><img
+              src="../assets/logo.webp"
+              alt="logo"
+              style="height: 70px; width: 70px; margin: 0"
+          /></a>
+        </div>
+        <!-- <div class="logo">DIY Electronics</div> -->
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="/Redirection screens/Projects.html">DIYs</a></li>
+          <li><a href="/Redirection screens/about.html">About</a></li>
+          <li><a href="/Redirection screens/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+    <section class="about-section">
+      <div class="overlay"></div>
+      <div class="about-content">
+        <h1>About Us</h1>
+        <button class="join-btn">Join the Community</button>
+        <h1>
+          DIY Electronics is a very dynamic and unique website which helps and
+          provides users many new ideas for DIY projects that they can create
+          and use at their Home/Office/Preferred places, etc.
+        </h1>
+      </div>
+    </section>
+
+    <footer>
+      <img src="../assets/logo.webp" alt="DIY Electronics Small Logo" style="height: 50px; width: 50px; margin: 0%;" />
+    </footer>
+
+    <script>
+      document
+        .querySelector(".join-btn")
+        .addEventListener("click", function () {
+          alert("Thank you for joining the community!");
+        });
+    </script>
+  </body>
+</html>
